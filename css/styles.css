@@ -2,10 +2,13 @@
 
 :root {
   --magnolia: #F7F0F5;
+  --light: #eeeeee;
   --black-eerie: #222222;
   --blue-savoy: #6369D1;
+  --blue-savoy-light: hsl(237, 54%, 65%);
   --cyan-pacific: #23B5D3;
   --green-spring: #64F58D;
+  --green-spring-dark: #0ed847;
   font-size: 16px;
 }
 
@@ -146,4 +149,141 @@ body {
 .skills__item {
   font-size: 24px;
   font-weight: 400;
+}
+
+/* =============== PORTFOLIO =============== */
+#portfolio {
+  margin-bottom: 60px;
+}
+
+.portfolio__jobs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+}
+
+.portfolio__heading {
+  font-size: 72px;
+  color: var(--green-spring);
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.portfolio__item {
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-savoy);
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  grid-column: span 4;
+  font-size: 20px;
+}
+
+/* =============== CONTACT =============== */
+#contact {
+  margin-bottom: 40px;
+}
+
+.contact__form-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 20px;
+}
+
+.contact__form-input {
+  background-color: var(--blue-savoy);
+  border: none;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  color: var(--light);
+  font-size: 16px;
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+  color: var(--magnolia);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contact__form-input:focus,
+.contact__form-textarea:focus {
+  color: var(--magnolia);
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact__form-textarea {
+  background-color: var(--blue-savoy);
+  border: none;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.contact__form-name {
+  grid-column: 1/7;
+  grid-row: 1/2;
+}
+
+.contact__form-email {
+  grid-column: 1/7;
+  grid-row: 2/3;
+}
+
+.contact__form-company {
+  grid-column: 1/7;
+  grid-row: 3/4;
+}
+
+.contact__form-topic {
+  grid-column: 1/7;
+  grid-row: 4/5;
+}
+
+.contact__form-message {
+  grid-column: 7/13;
+  grid-row: 1/5;
+}
+
+.contact__submit {
+  grid-column: 1/13;
+  grid-row: 5/6;
+  justify-self: end;
+}
+
+.contact__button {
+  border: none;
+  background-color: var(--blue-savoy);
+  color: var(--light);
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.contact__button:hover {
+  color: #ffffff;
+  background-color: var(--blue-savoy-light);
+}
+
+.contact__heading {
+  font-size: 72px;
+  color: var(--green-spring);
+  font-weight: 600;
+  margin: 0 0 20px 0;
 }
