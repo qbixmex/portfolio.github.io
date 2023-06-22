@@ -6,6 +6,7 @@
   --blue-savoy: #6369D1;
   --cyan-pacific: #23B5D3;
   --green-spring: #64F58D;
+  font-size: 16px;
 }
 
 * {
@@ -18,6 +19,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  color: var(--magnolia);
 }
 
 .container {
@@ -25,9 +27,15 @@ body {
   margin: auto;
 }
 
+.hide {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 /* =============== MAIN MENU =============== */
 #nav {
-  margin: 40px 0 40px;
+  margin: 40px 0 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -38,6 +46,8 @@ body {
   color: var(--magnolia);
   text-decoration: none;
   transition: 300ms ease-in-out;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .nav__link--active {
@@ -49,4 +59,91 @@ body {
 .nav__link--active,
 .nav__link:hover {
   color: var(--green-spring);
+}
+
+/* =============== SUMMARY =============== */
+#summary {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.summary__content {
+  grid-column: 1 / 8;
+}
+
+.summary__image {
+  grid-column: 8 / 13;
+}
+
+.summary__heading {
+  font-size: 72px;
+  line-height: 60px;
+  color: var(--green-spring);
+  font-weight: 600;
+  margin: 0;
+  width: 330px;
+}
+
+.summary__subheading {
+  font-size: 28px;
+}
+
+.summary__description {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.summary__description--green {
+  color: var(--green-spring);
+}
+
+.summary__image {
+  min-width: 300px;
+  max-width: 400px;
+  justify-self: center;
+}
+
+.summary__image img {
+  width: 100%;
+  height: auto;
+}
+
+/* =============== SKILLS =============== */
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  margin-bottom: 40px;
+}
+
+.skills__heading {
+  grid-column: 1/13;
+  margin-bottom: 20px;
+  color: var(--green-spring);
+  font-size: 72px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.skills__group {
+  grid-column: span 3;
+}
+
+.skills__subheading {
+  color: var(--cyan-pacific);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin: 0 0 20px 0;
+}
+
+.skills_list {
+  padding-left: 40px;
+  margin: 0 0 40px 0;
+}
+
+.skills__item {
+  font-size: 24px;
+  font-weight: 400;
 }
